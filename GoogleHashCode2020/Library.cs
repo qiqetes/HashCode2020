@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using static GoogleHashCode2020.GlovalVar;
 
 namespace GoogleHashCode2020
 {
@@ -46,9 +47,17 @@ namespace GoogleHashCode2020
 
         public void LibraryPunctuation()
         {
+            LibraryPunctuation(0);
             
         }
 
-        
+        public void LibraryPunctuation(int threshold)
+        {
+            int howMany = (nDays - days) * booksPerDay + threshold;
+
+
+        }
+
+
     }
 }
