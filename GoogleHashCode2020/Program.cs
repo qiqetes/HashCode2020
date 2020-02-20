@@ -18,7 +18,7 @@ namespace GoogleHashCode2020
             // INTERPRET INPUT DATA, DON'T CHANGE IT
             string line;
             int lineCount = 0; 
-            System.IO.StreamReader file = new System.IO.StreamReader(inputPath + "\\" + inputFileNames[0]); // CHANGE TTHIS TO CHANGE FILE
+            System.IO.StreamReader file = new System.IO.StreamReader(inputPath + "\\" + inputFileNames[5]); // CHANGE TTHIS TO CHANGE FILE
 
             /////////////////////////////////////////////////////////////////
             int nBooks; // number of books
@@ -72,7 +72,7 @@ namespace GoogleHashCode2020
 
             //    Console.WriteLine(libraries[libraries.Length - 1].setOfBooks[i].score);
             //}
-            Simple.main(libraries, books, nDays);
+            //Simple.main(libraries, books, nDays);
         }
     }
 }

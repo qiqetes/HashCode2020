@@ -6,6 +6,7 @@ namespace GoogleHashCode2020
 {
     class Simple
     {
+        public static string projectPath = System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().Length - 24);
         public static void main(Library[] libraries, Book[] books, int days) {
             
             List<Int32> scanned = new List<Int32>();
@@ -59,6 +60,7 @@ namespace GoogleHashCode2020
             outText = l + "\n";
             outText += res;
             Console.WriteLine(outText);
+            System.IO.File.WriteAllText(projectPath+"\\"+"outText.txt", outText);
         }
     }
 }
