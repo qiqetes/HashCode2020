@@ -4,13 +4,20 @@ using System.Text;
 
 namespace GoogleHashCode2020
 {
-    class Library
+    public class Library
     {
+        /////////////////////////////////////////////
+        // FROM PROBLEM
         public int id;
         public Book[] setOfBooks; // id of the books
         public int nBooks;
         public int days;
         public int booksPerDay;
+        /////////////////////////////////////////////
+
+        public int estimatePunctuation;
+
+
 
         public Book[] SetOfBooks { get => setOfBooks; set => setOfBooks = value; }
 
@@ -35,6 +42,11 @@ namespace GoogleHashCode2020
             {
                 return b.score - a.score;
             });
+        }
+
+        public void LibraryPunctuation()
+        {
+            
         }
 
         
