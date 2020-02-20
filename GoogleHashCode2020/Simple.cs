@@ -62,7 +62,7 @@ namespace GoogleHashCode2020
             outText = l + "\n";
             outText += res;
             Console.WriteLine(outText);
-            System.IO.File.WriteAllText(projectPath+"\\"+ "e_so_many_books.out.txt", outText);
+            System.IO.File.WriteAllText(projectPath+"\\"+ "d_tough_choices.out.txt", outText);
         }
     }
 }
