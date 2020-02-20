@@ -6,7 +6,7 @@ namespace GoogleHashCode2020
 {
     public class Book
     {
-        int id;
+        public int id;
         public int score;
         public Book(int id, int sc)
         {

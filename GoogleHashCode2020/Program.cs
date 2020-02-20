@@ -6,8 +6,6 @@ namespace GoogleHashCode2020
 {
     class Program
     {
-
-
         static void Main(string[] args)
         {
             string projectPath = System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().Length - 24);
@@ -21,9 +19,9 @@ namespace GoogleHashCode2020
             // INTERPRET INPUT DATA, DON'T CHANGE IT
             string line;
             int lineCount = 0; 
-            System.IO.StreamReader file = new System.IO.StreamReader(inputPath + "\\" + inputFileNames[2]); // CHANGE TTHIS TO CHANGE FILE
+            System.IO.StreamReader file = new System.IO.StreamReader(inputPath + "\\" + inputFileNames[0]); // CHANGE TTHIS TO CHANGE FILE
 
-            
+
             
             while((line = file.ReadLine()) != null)
             {
@@ -66,14 +64,8 @@ namespace GoogleHashCode2020
                 lineCount++;
             }
 
-            //libraries[libraries.Length -1 ].SortBooks();
-            //for (int i = 0; i < libraries[libraries.Length -1].setOfBooks.Length; i++)
-            //{
 
-            //    Console.WriteLine(libraries[libraries.Length - 1].setOfBooks[i].score);
-            //}
-
-
+            Simple.main(libraries, books, nDays);
 
         }
     }
