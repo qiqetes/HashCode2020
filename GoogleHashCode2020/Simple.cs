@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using static GoogleHashCode2020.GlovalVar;
 
 namespace GoogleHashCode2020
 {
     class Simple
     {
         public static string projectPath = System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().Length - 24);
-        public static void main(Library[] libraries, Book[] books, int days) {
-            
+        public static void main() {
+            int days = nDays;
+
             List<Int32> scanned = new List<Int32>();
             string res="";
             string outText = "";
@@ -29,7 +31,7 @@ namespace GoogleHashCode2020
                     dayNow += libraries[i].days;
                     l++;
 
-                    res += libraries[i].id + "\n";
+                    res += libraries[i].id + " ";
 
                     j = libraries[i].setOfBooks.Length - 1;
                     dayLib = dayNow;
@@ -60,7 +62,7 @@ namespace GoogleHashCode2020
             outText = l + "\n";
             outText += res;
             Console.WriteLine(outText);
-            System.IO.File.WriteAllText(projectPath+"\\"+"outText.txt", outText);
+            System.IO.File.WriteAllText(projectPath+"\\"+ "e_so_many_books.out.txt", outText);
         }
     }
 }
