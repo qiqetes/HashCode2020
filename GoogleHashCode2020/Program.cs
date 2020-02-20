@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using static GoogleHashCode2020.GlovalVar;
 
 namespace GoogleHashCode2020
 {
@@ -20,13 +21,7 @@ namespace GoogleHashCode2020
             int lineCount = 0; 
             System.IO.StreamReader file = new System.IO.StreamReader(inputPath + "\\" + inputFileNames[5]); // CHANGE TTHIS TO CHANGE FILE
 
-            /////////////////////////////////////////////////////////////////
-            int nBooks; // number of books
-            int nLibraries; // number of libraries
-            int nDays = 0; // days we have to scan
-            Book[] books = null;
-            Library[] libraries = null;
-            /////////////////////////////////////////////////////////////////
+
             
             while((line = file.ReadLine()) != null)
             {
@@ -60,15 +55,15 @@ namespace GoogleHashCode2020
                         {
                             lib.SetOfBooks[i] = books[Int32.Parse(raw[i])];
                         }
+
+                        // SORT? comment this if you dont want them to have books sorted from the start
+                        lib.SortBooks();
                     }
                 }
 
                 lineCount++;
             }
 
-            //libraries[libraries.Length -1 ].SortBooks();
-            //for (int i = 0; i < libraries[libraries.Length -1].setOfBooks.Length; i++)
-            //{
 
             //    Console.WriteLine(libraries[libraries.Length - 1].setOfBooks[i].score);
             //}

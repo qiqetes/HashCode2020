@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GoogleHashCode2020
 {
-    class Book
+    public class Book
     {
         public int id;
         public int score;
