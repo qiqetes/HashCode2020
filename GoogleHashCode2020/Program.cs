@@ -19,14 +19,14 @@ namespace GoogleHashCode2020
             // INTERPRET INPUT DATA, DON'T CHANGE IT
             string line;
             int lineCount = 0; 
-            System.IO.StreamReader file = new System.IO.StreamReader(inputPath + "\\" + inputFileNames[0]); // CHANGE TTHIS TO CHANGE FILE
+            System.IO.StreamReader file = new System.IO.StreamReader(inputPath + "\\" + inputFileNames[3]); // CHANGE TTHIS TO CHANGE FILE
 
 
-            
-            while((line = file.ReadLine()) != null)
+            line = file.ReadLine();
+            while (line != null)
             {
                 string[] raw = line.Split(' ');
-                if (raw.Length < 2) break;
+                
                 if(lineCount == 0)
                 {
                     nBooks = Int32.Parse(raw[0]);
@@ -45,6 +45,7 @@ namespace GoogleHashCode2020
                 else{
                     if(lineCount % 2 == 0)
                     {
+                        if ((lineCount - 2) / 2 >= nLibraries) break;
                         libraries[(lineCount - 2) / 2] = new Library((lineCount - 2) / 2, Int32.Parse(raw[0]), Int32.Parse(raw[1]), Int32.Parse(raw[2]));
                         libraries[(lineCount - 2) / 2].SetOfBooks = new Book[libraries[(lineCount - 2) / 2].nBooks];
                     }
@@ -59,13 +60,20 @@ namespace GoogleHashCode2020
                         // SORT? comment this if you dont want them to have books sorted from the start
                         lib.SortBooks();
                     }
+                    //    //Console.WriteLine(lineCount + "  " + line + " " + (lineCount - 2) / 2);
+                    //    Console.WriteLine((lineCount - 2) / 2 + " " + libraries.Length);
+                    //if (libraries[(lineCount - 2) / 2] == null)
+                    //{
+                    //    Console.WriteLine("Library " + (lineCount - 2) / 2 + " is null");
+                    //}
                 }
-
+                
                 lineCount++;
+                line = file.ReadLine();
             }
 
 
-            Simple.main(libraries, books, nDays);
+            //Simple.main(libraries, books, nDays);
 
         }
     }
